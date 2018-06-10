@@ -1,0 +1,48 @@
+
+# Config file of RhenowarUtil plugin
+
+RhenowarUtil:
+  JNF: '1.1_09'
+  Luaj: '3.0.1'
+  DefaultLanguage: 'en_US'
+  SignTP:
+    rate: 'RHN-TP'
+    percentOnlyVIP: 80
+  auth:
+    password:
+      length:
+        min: 8
+        max: 24
+      range:
+        regex: '\w*'
+        description: '&2a&a-&2z &7| &2A&a-&2Z &7| &20&a-&29 &7| &2_'
+    timeout: 1200
+  timer: 72000
+  type: 'default'
+  rank:
+    'default':
+      color : 'f'
+      level:
+        build: 1
+        special: 1
+      permissions: []
+    'admin':
+      color : 'c'
+      level:
+        build: 10
+        special: 10
+      permissions:
+        - '*'
+  improve:
+    health: 20
+    lobby:
+      world: 'world'
+      lock: false
+      list:
+        white: []
+        black: []
+  database:
+    url: 'localhost'
+    name: 'db'
+    user: 'user'
+    pass: 'pass'

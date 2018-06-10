@@ -1,0 +1,67 @@
+<!-- jWeb
+	title: INTERAKTYWNY ATLAS ROŚLIN
+	description: Zrób zdjęcie i odnajdź roślinę.
+	charset: UTF-8
+	viewport: width=device-width, initial-scale=1, shrink-to-fit=no
+	style: css/style.css, css/bootstrap4.0.0.min.css
+  script: js/jquery3.3.1.min.js, js/popper1.12.9.min.js, js/bootstrap4.0.0.min.js
+	lang: pl
+	author: Konkol Bartosz, Jachimowicz Julia, Filusz Patryk
+ %smargin: style="margin-top: 10px;"
+ %margin: margin-top: 10px;
+ %men-a: class="text-white" style="width: 100%;"
+ %men-li: class="list-group-item"
+ %men-btn: class="btn btn-outline-light btn-lg" style="width: 100%; margin-top:5px; word-wrap: break-word;"
+ %link: http://localhost/jweb/explory/
+-->
+
+<?jws
+	workspace(explory);
+?>
+
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-md-12" %smargin%>
+   <a href="%link%" id="title-link">
+    <div id="header">
+     <h1 id="header-title">interaktywny<br>atlas roślin</h1>
+     </div>
+   </a>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-lg-3" style="display: table-cell; %margin%">
+   <div id="menu" class="bg-success">
+    <div class="btn-group-vertical btn-group-sm" role="group" style="width: 100%;">
+    <a %men-a% href="%link%?page=1"><button type="button" %men-btn%><strong>O projekcie</strong></strong></button></a>
+    <a %men-a% href="%link%?page=2"><button type="button" %men-btn%><strong>Szukaj rośliny</strong></button></a>
+    <a %men-a% href="%link%?page=3"><button type="button" %men-btn%><strong>Dodaj roślinę</strong></button></a>
+    <a %men-a% href="%link%?page=4"><button type="button" %men-btn%><strong>Przeglądaj bazę<br>roślin</strong></button></a>
+    <a %men-a% href="%link%?page=5"><button type="button" %men-btn%><strong>FAQ</strong></button></a>
+    </div>
+   </div>
+  </div>
+  <div class="col-lg-9" style="display: table-cell; %margin%">
+   <div id="content" class="bg-light">
+    <?php
+     script("jws", "element(link, explory/".(isset($_GET["page"]) ? $_GET["page"] : "1").".jw);");
+    ?>
+    <?jws
+     print($event(subpage, $import($element(link))));
+    ?>
+   </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-lg-9">
+   <div id="footer" class="bg-light">
+    <span class="text-muted">Strona pracy konkursowej<!-- na "KONKURS NAUKOWY E(X)PLORY" <a class="text-muted" href="http://www.explory.pl/" target="_blank">LINK</a>--></span>
+   </div>
+  </div>
+  <div class="col-lg-3 text-center">
+   <div id="footer" class="bg-light text-muted" style="padding: 3px">
+    Działa dzięki:&nbsp&nbsp<a href="http://doc.jweb.digitalpgs.com/" target="_blank"><img class="img-thumbnail pull-right" width="80px" src="img/jWeb.png" alt="&nbsp jWeb"></a>
+   </div>
+  </div>
+ </div>
+</div>

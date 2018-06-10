@@ -1,0 +1,41 @@
+<div class="text-center">
+ <h3 style="padding: 10px; border-radius: 10px" class="alert-success">
+ Prześlij zdjęcie liścia rośliny do identyfikacji
+ </h3>
+ <form id="plant_search" action="form/2" method="post" class="form" enctype="multipart/form-data">
+ <div class="custom-file">
+  <input  class="custom-file-input" type="file" accept="image/*" name="photo" id="photo">
+   <label id="photo-label" class="custom-file-label" for="photo">Wybierz zdjęcie...</label>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success"  data-toggle="modal" data-target="#czekaj" style="margin-top: 15px;"><strong>SZUKAJ</strong></button>
+ </form>
+</div>
+
+<div class="modal" id="czekaj" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+ <div class="modal-dialog modal-sm">
+  <div id="mod_content" class="modal-content text-center">
+
+  </div>
+ </div>
+</div>
+
+<script type="text/javascript">
+var f_search = document.getElementById("plant_search");
+f_search.addEventListener("submit", walidate);
+  
+function walidate(e) {
+   if (document.getElementById('photo-label').innerHTML == "Wybierz zdjęcie...") {
+      document.getElementById('mod_content').innerHTML = "<div class=\"modal-header\"><h4 class=\"modal-title\" id=\"modalLabel\">Nie wybrano zdjęcia!</h4><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div><div class=\"modal-body\">Wybierz zdjęcie i spróbuj ponownie.</div>";
+        e.preventDefault();
+    }
+    else {
+     document.getElementById('mod_content').innerHTML = "<div id=\"mute\>&nbsp;</div><div class=\"modal-header\"><div class=\"text-center\" style=\"width: 100%;\"><img src=\"img/loading.gif\" style=\"width: 100px;\"></div></div><div class=\"modal-body\">Trwa Przesyłanie<br>Proszę nie odświeżać strony!</div>"
+    }
+}
+
+ var input = $("#photo").change(function(){
+ var a = this.value.split("\\").pop();
+ document.getElementById('photo-label').innerHTML = a;
+})
+</script>

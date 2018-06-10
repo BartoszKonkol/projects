@@ -1,0 +1,99 @@
+<!-- JWeb
+	title: NanoKarrin - MetaData MP3
+	favicon: http://nanokarrin.pl/favicon.ico
+	%sl: 600
+	%ss: 250
+	%si: 50
+	%sif: 30
+-->
+<form method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+	<fieldset style="width: %sl%px">
+		<fieldset style="width: %sl%px">
+			<legend>Pliki</legend>
+			<table border="0" width="%sl%">
+				<tr>
+					<td width="%ss%">Materiał źródłowy <small>(MP3)</small>:</td>
+					<td>
+						<input type="file" name="file-src" size="%sif%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Obrazek miniaturki <small>(BMP/PNG/JPG)</small>:</td>
+					<td>
+						<input type="file" name="file-img" size="%sif%">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset style="width: %sl%px">
+			<legend>Szczegóły</legend>
+			<table border="0" width="%sl%">
+				<tr>
+					<td width="%ss%">Tytuł serii:</td>
+					<td>
+						<input type="text" name="title-major" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Tytuł piosenki:</td>
+					<td>
+						<input type="text" name="title-minor" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Drużyna bitwowa:</td>
+					<td>
+						<input type="text" name="team" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Rok produkcji:</td>
+					<td>
+						<input type="number" name="year" min="2005" max="2025" disabled>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset style="width: %sl%px">
+			<legend>Ekipa</legend>
+			<table border="0" width="%sl%">
+				<tr>
+					<td width="%ss%">Reżyseria:</td>
+					<td>
+						<input type="text" name="direction" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Wokal:</td>
+					<td>
+						<input type="text" name="vocal" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Tekst piosenki:</td>
+					<td>
+						<input type="text" name="lyrics" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Realizacja dźwięku:</td>
+					<td>
+						<input type="text" name="realization" size="%si%">
+					</td>
+				</tr>
+				<tr>
+					<td width="%ss%">Inne:</td>
+					<td>
+						<input type="text" name="other" size="%si%">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<small><br></small>
+		<center>
+			<input type="submit" value="Dodaj metadane do pliku MP3">
+			<input type="reset" value="Wyczyść pola formularza">
+		</center>
+	</fieldset>
+</form>
+<script type="text/javascript">document.forms[0].elements['year'].value = new Date().getFullYear();</script>

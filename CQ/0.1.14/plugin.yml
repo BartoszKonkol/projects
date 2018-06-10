@@ -1,0 +1,11 @@
+
+name: Conquest
+main: net.polishgames.rhenowar.conquest.Conquest
+version: 0.1.14
+author: Bartosz Konkol
+
+commands:
+  conquest:
+    description: Conquest
+    usage: /<command>
+    aliases: [cq]

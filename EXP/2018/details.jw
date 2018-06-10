@@ -1,0 +1,14 @@
+<div class="alert alert-success text-center">
+<strong>
+ <h1 id="namepl">%name%</h1>
+ <h3 id="latin_name">%latin%</h3>
+</strong>
+</div>
+<div class="text-center" style="height: 500px;"><a href="%link%photo/%id%" target="_blank"><img style="height: 100%; width: auto;" src="%link%photo/%id%"></a></div>
+<hr>
+<p id="description"><strong>%name%</strong> – %desc%</p>
+<hr>
+<div class="row">
+	<div class="col-sm-6 text-center"><a class="btn btn-success btn-lg" href="%wiki%" target="_blank">Wikipedia</a></div>
+	<div class="col-sm-6 text-center"><a class="btn btn-success btn-lg" href="%google%" target="_blank">Więcej grafiki</a></div>
+</div>

@@ -1,0 +1,5 @@
+
+name: RhenowarUtilBungee
+main: net.polishgames.rhenowar.util.bungee.UtilPluginBungee
+version: 1.1.2.1
+author: Bartosz Konkol

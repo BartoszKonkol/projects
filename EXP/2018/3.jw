@@ -1,0 +1,86 @@
+<h3 style="padding: 10px; border-radius: 10px" class="alert-success text-center">Dodawanie nowej rośliny do bazy</h3>
+<form id="plant_add" action="form/3" method="post" enctype="multipart/form-data">
+ <label for="namepl">Nazwa (PL)</label>
+ <input type="text" class="form-control" id="namepl" name="namepl">
+ <br>
+ <label  for="latin_name_1">Nazwa naukowa</label>
+ <div class="row text-center">
+  <div class="col-sm-6">
+   <input type="text" class="form-control" id="latin_name_1" name="latin_name_1" placeholder="Nazwa rodzajowa">
+  </div>
+  <div class="col-sm-6">
+   <input type="text" class="form-control" id="latin_name_2" name="latin_name_2" placeholder="Nazwa gatunkowa">
+  </div>
+ </div>
+ <br>
+ <label  for="wiki">Link Wikipedia</label>
+ <input class="form-control" type="url" id="wiki" name="wiki" value="https://pl.wikipedia.org/wiki/" placeholder="Link do strony na Wikipedii">
+ <br>
+ <label  for="google">Link Google grafika</label>
+ <input class="form-control" type="url" id="google" name="google" value="https://www.google.pl/search?tbm=isch&q=" placeholder="Link do Google Grafika">
+ <br>
+ <label  for="description">Krótki opis rośliny</label>
+ <textarea class="form-control" name="description" id="description"></textarea>
+ <br>
+ <div class="custom-file">
+  <input  class="custom-file-input" type="file" accept="image/*" name="photo" id="photo">
+  <label id="photo-label" class="custom-file-label" for="photo">Wybierz zdjęcie...</label>
+ </div>
+ <br>
+ <br>
+ <button id="btn" type="submit" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#czekaj"><strong>DODAJ</strong></button>
+</form>
+
+<div class="modal" id="czekaj" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+ <div class="modal-dialog modal-sm">
+  <div id="mod_content" class="modal-content text-center">
+
+  </div>
+ </div>
+</div>
+
+<script type="text/javascript">
+var f_add = document.getElementById("plant_add");
+f_add.addEventListener("submit", walidate);
+  
+function walidate(e) {
+  var errbool = false;
+  var errtxt = "<div class=\"modal-header\"><h4 class=\"modal-title\" id=\"modalLabel\">Nie wypełniono wszystkich pól formularza!</h4><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div><div class=\"modal-body\">Uzupełnij brakujące informacje: <br>";
+    if (document.getElementById('namepl').value == "") {
+      errtxt = errtxt + "Nazwa (PL), ";
+      errbool = true;
+    }
+    if ((document.getElementById('latin_name_1').value == "") || (document.getElementById('latin_name_2').value == "")) {
+      errtxt = errtxt + "Nazwa naukowa, ";
+      errbool = true;
+    }
+    if ((document.getElementById('wiki').value == "https://pl.wikipedia.org/wiki/") || (document.getElementById('google').value == "")) {
+      errtxt = errtxt + "Link Wikipedia, ";
+      errbool = true;
+    }
+    if ((document.getElementById('google').value == "https://www.google.pl/search?tbm=isch&q=") || (document.getElementById('google').value == "")){
+      errtxt = errtxt + "Link Google grafika, ";
+      errbool = true;
+    }
+    if (document.getElementById('description').value == "") {
+      errtxt = errtxt + "Krótki opis rośliny, ";
+      errbool = true;
+    }
+    if (document.getElementById('photo-label').innerHTML == "Wybierz zdjęcie...") {
+      errtxt = errtxt + "Wybierz zdjęcie, ";
+      errbool = true;
+    }
+    if (errbool) {
+      e.preventDefault();
+    }
+    else {
+     errtxt = "<div  id=\"mute\>&nbsp;</div><div class=\"modal-header\"><div class=\"text-center\" style=\"width: 100%;\"><img src=\"img/loading.gif\" style=\"width: 100px;\"></div></div><div class=\"modal-body\">Trwa Przesyłanie<br>Proszę nie odświerzać strony!"
+    }
+    document.getElementById('mod_content').innerHTML = errtxt + "<br><br></div>";
+  }
+ var input = $("#photo").change(function(){
+ var a = this.value.split("\\").pop();
+ document.getElementById('photo-label').innerHTML = a;
+
+})
+</script>

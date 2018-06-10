@@ -1,0 +1,54 @@
+
+# Konfiguracja pluginu.
+# Elementy zawarte w tym pliku mozna edytowac bezposrednio.
+
+# Conquest 0.1.1
+# McLobby
+# Bartosz Konkol
+
+# 1ms = 0.001s = 0.000016667min = 0.00000027778h
+# 1tick = 50ms = 0.05s = 0.00083333min = 0.0000138889h
+
+conquest:
+  # Czas, podczas gry na arenie, przeznaczony na budowanie.
+  # Podane w ticks.
+  # Domyslnie: 600
+  BuildTime: 600
+  # Czas, podczas gry na arenie, przeznaczony na walke.
+  # Podane w ticks.
+  # Domyslnie: 1200
+  FightTime: 1200
+  # Czas, podczas gry na arenie, co jaki gracz bedzie otrzymywal jedna strzale.
+  # Podane w ticks.
+  # Domyslnie: 40
+  AddArrowTime: 40
+  # Czas przerwy w petli kontrolowania zachowan gracza i minigry.
+  # Podane w ticks.
+  # Uwaga! Zbyt niska wartosc moze spowodowac spowolnienie serwera, zas wartosc zbyt wysoka zwiekszy prawdopodobienstwo wychodzenia gracza/minigry poza okreslona grywalnosc.
+  # Domyslnie: 2
+  LoopTime: 2
+  # Polowa dzielnika dystansu miedzy walczacymi zespolami. Liczba okresla o ile lini na raz ma przesuwac sie czesc pola walki przeznaczonego dla danej druzyny po zabiciu gracza.
+  # Domyslnie: 2
+  DivisorDistance: 2
+  # Wlaczanie/wylaczanie trybu debugowania pluginu. Gdy wlaczony, kazdy gracz otrzymuje szczegolowe raporty. Zawsze aktywne dla opiekunow minigry oraz gdy regiony nie sa skonfigurowane.
+  # Domyslnie: false
+  DebugMode: false
+  # Lista nick'ów opiekunow minigry. Kazdy opiekun ma mozliwosc m.in. definiowania regionow.
+  # Domyslnie lista jest pusta.
+  Managers: []
+  # Nazwa swiata, na ktorym toczyc ma sie gra.
+  # Uwaga! Nie nalezy zmieniac tej wartosci. Ewentualna jej edycje nalezy zazebic z danymi regionu.
+  # Domyslnie: Conquest
+  MainWorld: Conquest
+  # Domyslne pozycje lobby.
+  # Uwaga! Nie nalezy zmieniac tych wartosci. Ich wytyczne, po zdefiniowaniu danych regionu, beda ladowane inaczej.
+  MainLobby:
+    # Koordynat X w pozycji lobby.
+    # Domyslnie: 0.0
+    x: 0.0
+    # Koordynat Y (wysokosc) w pozycji lobby.
+    # Domyslnie: 128.0
+    y: 128.0
+    # Koordynat Z w pozycji lobby.
+    # Domyslnie: 0.0
+    z: 0.0

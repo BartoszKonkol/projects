@@ -1,0 +1,22 @@
+<div class="karta">
+	<div class="card">
+		<a href="%link%?page=details.%id%" target="_blank">
+			<div class="card-header">
+				<h3>%name%</h3>
+		</div>
+	</a>
+	<div class="card-body">
+		<a href="%link%?page=details.%id%" target="_blank">
+			<p class="card-text">
+				<img class="card_image" src="%link%photo/%id%">
+			</p>
+		</a>
+	</div>
+		<div class="card-footer">
+			<a href="%google%" target="_blank">Więcej grafiki</a>
+			<br>
+			<a href="%wikipedia%" target="_blank">Więcej informacji</a>
+		</div>
+	</div>
+</div>
+

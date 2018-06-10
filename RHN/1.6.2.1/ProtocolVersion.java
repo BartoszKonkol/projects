@@ -1,0 +1,580 @@
+package net.polishgames.rhenowar.util;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import static net.polishgames.rhenowar.util.ProtocolVersion.TypeVersion.*;
+
+public enum ProtocolVersion implements Rhenowar
+{
+
+	DEV_11200_PRE6("1.12-pre6", DEVELOPMENT_PRERELEASE, 333),
+	DEV_11200_PRE5("1.12-pre5", DEVELOPMENT_PRERELEASE, 332),
+	DEV_11200_PRE4("1.12-pre4", DEVELOPMENT_PRERELEASE, 331),
+	DEV_11200_PRE3("1.12-pre3", DEVELOPMENT_PRERELEASE, 330),
+	DEV_11200_PRE2("1.12-pre2", DEVELOPMENT_PRERELEASE, 329),
+	DEV_11200_PRE1("1.12-pre1", DEVELOPMENT_PRERELEASE, 328),
+	DEV_17W18B("17w18b", DEVELOPMENT_SNAPSHOT, 327),
+	DEV_17W18A("17w18a", DEVELOPMENT_SNAPSHOT, 326),
+	DEV_17W17B("17w17b", DEVELOPMENT_SNAPSHOT, 325),
+	DEV_17W17A("17w17a", DEVELOPMENT_SNAPSHOT, 324),
+	DEV_17W16B("17w16b", DEVELOPMENT_SNAPSHOT, 323),
+	DEV_17W16A("17w16a", DEVELOPMENT_SNAPSHOT, 322),
+	DEV_17W15A("17w15a", DEVELOPMENT_SNAPSHOT, 321),
+	DEV_17W14A("17w14a", DEVELOPMENT_SNAPSHOT, 320),
+	DEV_17W13B("17w13b", DEVELOPMENT_SNAPSHOT, 319),
+	DEV_17W13A("17w13a", DEVELOPMENT_SNAPSHOT, 318),
+	DEV_17W06A("17w06a", DEVELOPMENT_SNAPSHOT, 317),
+	OFFICIAL_11102("1.11.2", OFFICIAL, 316),
+	OFFICIAL_11101("1.11.1", OFFICIAL, 316),
+	DEV_16w50a("16w50a", DEVELOPMENT_SNAPSHOT, 316),
+	OFFICIAL_11100("1.11", OFFICIAL, 315),
+	DEV_11100_PRE1("1.11-pre1", DEVELOPMENT_PRERELEASE, 314),
+	DEV_16W44A("16w44a", DEVELOPMENT_SNAPSHOT, 313),
+	DEV_16W43A("16w43a", DEVELOPMENT_SNAPSHOT, 313),
+	DEV_16W42A("16w42a", DEVELOPMENT_SNAPSHOT, 312),
+	DEV_16W41A("16w41a", DEVELOPMENT_SNAPSHOT, 311),
+	DEV_16W40A("16w40a", DEVELOPMENT_SNAPSHOT, 310),
+	DEV_16W39C("16w39c", DEVELOPMENT_SNAPSHOT, 309),
+	DEV_16W39B("16w39b", DEVELOPMENT_SNAPSHOT, 308),
+	DEV_16W39A("16w39a", DEVELOPMENT_SNAPSHOT, 307),
+	DEV_16W38A("16w38a", DEVELOPMENT_SNAPSHOT, 306),
+	DEV_16W36A("16w36a", DEVELOPMENT_SNAPSHOT, 305),
+	DEV_16W35A("16w35a", DEVELOPMENT_SNAPSHOT, 304),
+	DEV_16W33A("16w33a", DEVELOPMENT_SNAPSHOT, 303),
+	DEV_16W32B("16w32b", DEVELOPMENT_SNAPSHOT, 302),
+	DEV_16W32A("16w32a", DEVELOPMENT_SNAPSHOT, 301),
+	UNKNOWN_300("unknown:300", TypeVersion.UNKNOWN, 300),
+	UNKNOWN_299("unknown:299", TypeVersion.UNKNOWN, 299),
+	UNKNOWN_298("unknown:298", TypeVersion.UNKNOWN, 298),
+	UNKNOWN_297("unknown:297", TypeVersion.UNKNOWN, 297),
+	UNKNOWN_296("unknown:296", TypeVersion.UNKNOWN, 296),
+	UNKNOWN_295("unknown:295", TypeVersion.UNKNOWN, 295),
+	UNKNOWN_294("unknown:294", TypeVersion.UNKNOWN, 294),
+	UNKNOWN_293("unknown:293", TypeVersion.UNKNOWN, 293),
+	UNKNOWN_292("unknown:292", TypeVersion.UNKNOWN, 292),
+	UNKNOWN_291("unknown:291", TypeVersion.UNKNOWN, 291),
+	UNKNOWN_290("unknown:290", TypeVersion.UNKNOWN, 290),
+	UNKNOWN_289("unknown:289", TypeVersion.UNKNOWN, 289),
+	UNKNOWN_288("unknown:288", TypeVersion.UNKNOWN, 288),
+	UNKNOWN_287("unknown:287", TypeVersion.UNKNOWN, 287),
+	UNKNOWN_286("unknown:286", TypeVersion.UNKNOWN, 286),
+	UNKNOWN_285("unknown:285", TypeVersion.UNKNOWN, 285),
+	UNKNOWN_284("unknown:284", TypeVersion.UNKNOWN, 284),
+	UNKNOWN_283("unknown:283", TypeVersion.UNKNOWN, 283),
+	UNKNOWN_282("unknown:282", TypeVersion.UNKNOWN, 282),
+	UNKNOWN_281("unknown:281", TypeVersion.UNKNOWN, 281),
+	UNKNOWN_280("unknown:280", TypeVersion.UNKNOWN, 280),
+	UNKNOWN_279("unknown:279", TypeVersion.UNKNOWN, 279),
+	UNKNOWN_278("unknown:278", TypeVersion.UNKNOWN, 278),
+	UNKNOWN_277("unknown:277", TypeVersion.UNKNOWN, 277),
+	UNKNOWN_276("unknown:276", TypeVersion.UNKNOWN, 276),
+	UNKNOWN_275("unknown:275", TypeVersion.UNKNOWN, 275),
+	UNKNOWN_274("unknown:274", TypeVersion.UNKNOWN, 274),
+	UNKNOWN_273("unknown:273", TypeVersion.UNKNOWN, 273),
+	UNKNOWN_272("unknown:272", TypeVersion.UNKNOWN, 272),
+	UNKNOWN_271("unknown:271", TypeVersion.UNKNOWN, 271),
+	UNKNOWN_270("unknown:270", TypeVersion.UNKNOWN, 270),
+	UNKNOWN_269("unknown:269", TypeVersion.UNKNOWN, 269),
+	UNKNOWN_268("unknown:268", TypeVersion.UNKNOWN, 268),
+	UNKNOWN_267("unknown:267", TypeVersion.UNKNOWN, 267),
+	UNKNOWN_266("unknown:266", TypeVersion.UNKNOWN, 266),
+	UNKNOWN_265("unknown:265", TypeVersion.UNKNOWN, 265),
+	UNKNOWN_264("unknown:264", TypeVersion.UNKNOWN, 264),
+	UNKNOWN_263("unknown:263", TypeVersion.UNKNOWN, 263),
+	UNKNOWN_262("unknown:262", TypeVersion.UNKNOWN, 262),
+	UNKNOWN_261("unknown:261", TypeVersion.UNKNOWN, 261),
+	UNKNOWN_260("unknown:260", TypeVersion.UNKNOWN, 260),
+	UNKNOWN_259("unknown:259", TypeVersion.UNKNOWN, 259),
+	UNKNOWN_258("unknown:258", TypeVersion.UNKNOWN, 258),
+	UNKNOWN_257("unknown:257", TypeVersion.UNKNOWN, 257),
+	UNKNOWN_256("unknown:256", TypeVersion.UNKNOWN, 256),
+	UNKNOWN_255("unknown:255", TypeVersion.UNKNOWN, 255),
+	UNKNOWN_254("unknown:254", TypeVersion.UNKNOWN, 254),
+	UNKNOWN_253("unknown:253", TypeVersion.UNKNOWN, 253),
+	UNKNOWN_252("unknown:252", TypeVersion.UNKNOWN, 252),
+	UNKNOWN_251("unknown:251", TypeVersion.UNKNOWN, 251),
+	UNKNOWN_250("unknown:250", TypeVersion.UNKNOWN, 250),
+	UNKNOWN_249("unknown:249", TypeVersion.UNKNOWN, 249),
+	UNKNOWN_248("unknown:248", TypeVersion.UNKNOWN, 248),
+	UNKNOWN_247("unknown:247", TypeVersion.UNKNOWN, 247),
+	UNKNOWN_246("unknown:246", TypeVersion.UNKNOWN, 246),
+	UNKNOWN_245("unknown:245", TypeVersion.UNKNOWN, 245),
+	UNKNOWN_244("unknown:244", TypeVersion.UNKNOWN, 244),
+	UNKNOWN_243("unknown:243", TypeVersion.UNKNOWN, 243),
+	UNKNOWN_242("unknown:242", TypeVersion.UNKNOWN, 242),
+	UNKNOWN_241("unknown:241", TypeVersion.UNKNOWN, 241),
+	UNKNOWN_240("unknown:240", TypeVersion.UNKNOWN, 240),
+	UNKNOWN_239("unknown:239", TypeVersion.UNKNOWN, 239),
+	UNKNOWN_238("unknown:238", TypeVersion.UNKNOWN, 238),
+	UNKNOWN_237("unknown:237", TypeVersion.UNKNOWN, 237),
+	UNKNOWN_236("unknown:236", TypeVersion.UNKNOWN, 236),
+	UNKNOWN_235("unknown:235", TypeVersion.UNKNOWN, 235),
+	UNKNOWN_234("unknown:234", TypeVersion.UNKNOWN, 234),
+	UNKNOWN_233("unknown:233", TypeVersion.UNKNOWN, 233),
+	UNKNOWN_232("unknown:232", TypeVersion.UNKNOWN, 232),
+	UNKNOWN_231("unknown:231", TypeVersion.UNKNOWN, 231),
+	UNKNOWN_230("unknown:230", TypeVersion.UNKNOWN, 230),
+	UNKNOWN_229("unknown:229", TypeVersion.UNKNOWN, 229),
+	UNKNOWN_228("unknown:228", TypeVersion.UNKNOWN, 228),
+	UNKNOWN_227("unknown:227", TypeVersion.UNKNOWN, 227),
+	UNKNOWN_226("unknown:226", TypeVersion.UNKNOWN, 226),
+	UNKNOWN_225("unknown:225", TypeVersion.UNKNOWN, 225),
+	UNKNOWN_224("unknown:224", TypeVersion.UNKNOWN, 224),
+	UNKNOWN_223("unknown:223", TypeVersion.UNKNOWN, 223),
+	UNKNOWN_222("unknown:222", TypeVersion.UNKNOWN, 222),
+	UNKNOWN_221("unknown:221", TypeVersion.UNKNOWN, 221),
+	UNKNOWN_220("unknown:220", TypeVersion.UNKNOWN, 220),
+	UNKNOWN_219("unknown:219", TypeVersion.UNKNOWN, 219),
+	UNKNOWN_218("unknown:218", TypeVersion.UNKNOWN, 218),
+	UNKNOWN_217("unknown:217", TypeVersion.UNKNOWN, 217),
+	UNKNOWN_216("unknown:216", TypeVersion.UNKNOWN, 216),
+	UNKNOWN_215("unknown:215", TypeVersion.UNKNOWN, 215),
+	UNKNOWN_214("unknown:214", TypeVersion.UNKNOWN, 214),
+	UNKNOWN_213("unknown:213", TypeVersion.UNKNOWN, 213),
+	UNKNOWN_212("unknown:212", TypeVersion.UNKNOWN, 212),
+	UNKNOWN_211("unknown:211", TypeVersion.UNKNOWN, 211),
+	OFFICIAL_11002("1.10.2", OFFICIAL, 210),
+	OFFICIAL_11001("1.10.1", OFFICIAL, 210),
+	OFFICIAL_11000("1.10", OFFICIAL, 210),
+	UNKNOWN_209("unknown:209", TypeVersion.UNKNOWN, 209),
+	UNKNOWN_208("unknown:208", TypeVersion.UNKNOWN, 208),
+	UNKNOWN_207("unknown:207", TypeVersion.UNKNOWN, 207),
+	UNKNOWN_206("unknown:206", TypeVersion.UNKNOWN, 206),
+	DEV_11000_PRE2("1.10-pre2", DEVELOPMENT_PRERELEASE, 205),
+	DEV_11000_PRE1("1.10-pre1", DEVELOPMENT_PRERELEASE, 204),
+	DEV_16W21B("16w21b", DEVELOPMENT_SNAPSHOT, 203),
+	DEV_16W21A("16w21a", DEVELOPMENT_SNAPSHOT, 202),
+	DEV_16W20A("16w20a", DEVELOPMENT_SNAPSHOT, 201),
+	UNKNOWN_200("unknown:200", TypeVersion.UNKNOWN, 200),
+	UNKNOWN_199("unknown:199", TypeVersion.UNKNOWN, 199),
+	UNKNOWN_198("unknown:198", TypeVersion.UNKNOWN, 198),
+	UNKNOWN_197("unknown:197", TypeVersion.UNKNOWN, 197),
+	UNKNOWN_196("unknown:196", TypeVersion.UNKNOWN, 196),
+	UNKNOWN_195("unknown:195", TypeVersion.UNKNOWN, 195),
+	UNKNOWN_194("unknown:194", TypeVersion.UNKNOWN, 194),
+	UNKNOWN_193("unknown:193", TypeVersion.UNKNOWN, 193),
+	UNKNOWN_192("unknown:192", TypeVersion.UNKNOWN, 192),
+	UNKNOWN_191("unknown:191", TypeVersion.UNKNOWN, 191),
+	UNKNOWN_190("unknown:190", TypeVersion.UNKNOWN, 190),
+	UNKNOWN_189("unknown:189", TypeVersion.UNKNOWN, 189),
+	UNKNOWN_188("unknown:188", TypeVersion.UNKNOWN, 188),
+	UNKNOWN_187("unknown:187", TypeVersion.UNKNOWN, 187),
+	UNKNOWN_186("unknown:186", TypeVersion.UNKNOWN, 186),
+	UNKNOWN_185("unknown:185", TypeVersion.UNKNOWN, 185),
+	UNKNOWN_184("unknown:184", TypeVersion.UNKNOWN, 184),
+	UNKNOWN_183("unknown:183", TypeVersion.UNKNOWN, 183),
+	UNKNOWN_182("unknown:182", TypeVersion.UNKNOWN, 182),
+	UNKNOWN_181("unknown:181", TypeVersion.UNKNOWN, 181),
+	UNKNOWN_180("unknown:180", TypeVersion.UNKNOWN, 180),
+	UNKNOWN_179("unknown:179", TypeVersion.UNKNOWN, 179),
+	UNKNOWN_178("unknown:178", TypeVersion.UNKNOWN, 178),
+	UNKNOWN_177("unknown:177", TypeVersion.UNKNOWN, 177),
+	UNKNOWN_176("unknown:176", TypeVersion.UNKNOWN, 176),
+	UNKNOWN_175("unknown:175", TypeVersion.UNKNOWN, 175),
+	UNKNOWN_174("unknown:174", TypeVersion.UNKNOWN, 174),
+	UNKNOWN_173("unknown:173", TypeVersion.UNKNOWN, 173),
+	UNKNOWN_172("unknown:172", TypeVersion.UNKNOWN, 172),
+	UNKNOWN_171("unknown:171", TypeVersion.UNKNOWN, 171),
+	UNKNOWN_170("unknown:170", TypeVersion.UNKNOWN, 170),
+	UNKNOWN_169("unknown:169", TypeVersion.UNKNOWN, 169),
+	UNKNOWN_168("unknown:168", TypeVersion.UNKNOWN, 168),
+	UNKNOWN_167("unknown:167", TypeVersion.UNKNOWN, 167),
+	UNKNOWN_166("unknown:166", TypeVersion.UNKNOWN, 166),
+	UNKNOWN_165("unknown:165", TypeVersion.UNKNOWN, 165),
+	UNKNOWN_164("unknown:164", TypeVersion.UNKNOWN, 164),
+	UNKNOWN_163("unknown:163", TypeVersion.UNKNOWN, 163),
+	UNKNOWN_162("unknown:162", TypeVersion.UNKNOWN, 162),
+	UNKNOWN_161("unknown:161", TypeVersion.UNKNOWN, 161),
+	UNKNOWN_160("unknown:160", TypeVersion.UNKNOWN, 160),
+	UNKNOWN_159("unknown:159", TypeVersion.UNKNOWN, 159),
+	UNKNOWN_158("unknown:158", TypeVersion.UNKNOWN, 158),
+	UNKNOWN_157("unknown:157", TypeVersion.UNKNOWN, 157),
+	UNKNOWN_156("unknown:156", TypeVersion.UNKNOWN, 156),
+	UNKNOWN_155("unknown:155", TypeVersion.UNKNOWN, 155),
+	UNKNOWN_154("unknown:154", TypeVersion.UNKNOWN, 154),
+	UNKNOWN_153("unknown:153", TypeVersion.UNKNOWN, 153),
+	UNKNOWN_152("unknown:152", TypeVersion.UNKNOWN, 152),
+	UNKNOWN_151("unknown:151", TypeVersion.UNKNOWN, 151),
+	UNKNOWN_150("unknown:150", TypeVersion.UNKNOWN, 150),
+	UNKNOWN_149("unknown:149", TypeVersion.UNKNOWN, 149),
+	UNKNOWN_148("unknown:148", TypeVersion.UNKNOWN, 148),
+	UNKNOWN_147("unknown:147", TypeVersion.UNKNOWN, 147),
+	UNKNOWN_146("unknown:146", TypeVersion.UNKNOWN, 146),
+	UNKNOWN_145("unknown:145", TypeVersion.UNKNOWN, 145),
+	UNKNOWN_144("unknown:144", TypeVersion.UNKNOWN, 144),
+	UNKNOWN_143("unknown:143", TypeVersion.UNKNOWN, 143),
+	UNKNOWN_142("unknown:142", TypeVersion.UNKNOWN, 142),
+	UNKNOWN_141("unknown:141", TypeVersion.UNKNOWN, 141),
+	UNKNOWN_140("unknown:140", TypeVersion.UNKNOWN, 140),
+	UNKNOWN_139("unknown:139", TypeVersion.UNKNOWN, 139),
+	UNKNOWN_138("unknown:138", TypeVersion.UNKNOWN, 138),
+	UNKNOWN_137("unknown:137", TypeVersion.UNKNOWN, 137),
+	UNKNOWN_136("unknown:136", TypeVersion.UNKNOWN, 136),
+	UNKNOWN_135("unknown:135", TypeVersion.UNKNOWN, 135),
+	UNKNOWN_134("unknown:134", TypeVersion.UNKNOWN, 134),
+	UNKNOWN_133("unknown:133", TypeVersion.UNKNOWN, 133),
+	UNKNOWN_132("unknown:132", TypeVersion.UNKNOWN, 132),
+	UNKNOWN_131("unknown:131", TypeVersion.UNKNOWN, 131),
+	UNKNOWN_130("unknown:130", TypeVersion.UNKNOWN, 130),
+	UNKNOWN_129("unknown:129", TypeVersion.UNKNOWN, 129),
+	UNKNOWN_128("unknown:128", TypeVersion.UNKNOWN, 128),
+	UNKNOWN_127("unknown:127", TypeVersion.UNKNOWN, 127),
+	UNKNOWN_126("unknown:126", TypeVersion.UNKNOWN, 126),
+	UNKNOWN_125("unknown:125", TypeVersion.UNKNOWN, 125),
+	UNKNOWN_124("unknown:124", TypeVersion.UNKNOWN, 124),
+	UNKNOWN_123("unknown:123", TypeVersion.UNKNOWN, 123),
+	UNKNOWN_122("unknown:122", TypeVersion.UNKNOWN, 122),
+	UNKNOWN_121("unknown:121", TypeVersion.UNKNOWN, 121),
+	UNKNOWN_120("unknown:120", TypeVersion.UNKNOWN, 120),
+	UNKNOWN_119("unknown:119", TypeVersion.UNKNOWN, 119),
+	UNKNOWN_118("unknown:118", TypeVersion.UNKNOWN, 118),
+	UNKNOWN_117("unknown:117", TypeVersion.UNKNOWN, 117),
+	UNKNOWN_116("unknown:116", TypeVersion.UNKNOWN, 116),
+	UNKNOWN_115("unknown:115", TypeVersion.UNKNOWN, 115),
+	UNKNOWN_114("unknown:114", TypeVersion.UNKNOWN, 114),
+	UNKNOWN_113("unknown:113", TypeVersion.UNKNOWN, 113),
+	UNKNOWN_112("unknown:112", TypeVersion.UNKNOWN, 112),
+	UNKNOWN_111("unknown:111", TypeVersion.UNKNOWN, 111),
+	OFFICIAL_10904("1.9.4", OFFICIAL, 110),
+	OFFICIAL_10903("1.9.3", OFFICIAL, 110),
+	DEV_10903_PRE3("1.9.3-pre3", DEVELOPMENT_PRERELEASE, 110),
+	DEV_10903_PRE2("1.9.3-pre2", DEVELOPMENT_PRERELEASE, 110),
+	DEV_10903_PRE1("1.9.3-pre1", DEVELOPMENT_PRERELEASE, 109),
+	DEV_16W15B("16w15b", DEVELOPMENT_SNAPSHOT, 109),
+	DEV_16W15A("16w15a", DEVELOPMENT_SNAPSHOT, 109),
+	DEV_16W14A("16w14a", DEVELOPMENT_SNAPSHOT, 109),
+	OFFICIAL_10902("1.9.2", OFFICIAL, 109),
+	DEV_1RV_PRE1("1.RV-Pre1", DEVELOPMENT_APRILFOOLS, 108),
+	OFFICIAL_10901("1.9.1", OFFICIAL, 108),
+	DEV_10901_PRE3("1.9.1-pre3", DEVELOPMENT_PRERELEASE, 108),
+	DEV_10901_PRE2("1.9.1-pre2", DEVELOPMENT_PRERELEASE, 108),
+	DEV_10901_PRE1("1.9.1-pre1", DEVELOPMENT_PRERELEASE, 107),
+	OFFICIAL_10900("1.9", OFFICIAL, 107),
+	DEV_10900_PRE4("1.9-pre4", DEVELOPMENT_PRERELEASE, 106),
+	DEV_10900_PRE3("1.9-pre3", DEVELOPMENT_PRERELEASE, 105),
+	DEV_10900_PRE2("1.9-pre2", DEVELOPMENT_PRERELEASE, 104),
+	DEV_10900_PRE1("1.9-pre1", DEVELOPMENT_PRERELEASE, 103),
+	DEV_16W07B("16w07b", DEVELOPMENT_SNAPSHOT, 102),
+	DEV_16W07A("16w07a", DEVELOPMENT_SNAPSHOT, 101),
+	DEV_16W06A("16w06a", DEVELOPMENT_SNAPSHOT, 100),
+	DEV_16W05B("16w05b", DEVELOPMENT_SNAPSHOT, 99),
+	DEV_16W05A("16w05a", DEVELOPMENT_SNAPSHOT, 98),
+	DEV_16W04A("16w04a", DEVELOPMENT_SNAPSHOT, 97),
+	DEV_16W03A("16w03a", DEVELOPMENT_SNAPSHOT, 96),
+	DEV_16W02A("16w02a", DEVELOPMENT_SNAPSHOT, 95),
+	DEV_15W51B("15w51b", DEVELOPMENT_SNAPSHOT, 94),
+	DEV_15W51A("15w51a", DEVELOPMENT_SNAPSHOT, 93),
+	DEV_15W50A("15w50a", DEVELOPMENT_SNAPSHOT, 92),
+	DEV_15W49B("15w49b", DEVELOPMENT_SNAPSHOT, 91),
+	DEV_15W49A("15w49a", DEVELOPMENT_SNAPSHOT, 90),
+	DEV_15W47C("15w47c", DEVELOPMENT_SNAPSHOT, 89),
+	DEV_15W47B("15w47b", DEVELOPMENT_SNAPSHOT, 88),
+	DEV_15W47A("15w47a", DEVELOPMENT_SNAPSHOT, 87),
+	DEV_15W46A("15w46a", DEVELOPMENT_SNAPSHOT, 86),
+	DEV_15W45A("15w45a", DEVELOPMENT_SNAPSHOT, 85),
+	DEV_15W44B("15w44b", DEVELOPMENT_SNAPSHOT, 84),
+	DEV_15W44A("15w44a", DEVELOPMENT_SNAPSHOT, 83),
+	DEV_15W43C("15w43c", DEVELOPMENT_SNAPSHOT, 82),
+	DEV_15W43B("15w43b", DEVELOPMENT_SNAPSHOT, 81),
+	DEV_15W43A("15w43a", DEVELOPMENT_SNAPSHOT, 80),
+	DEV_15W42A("15w42a", DEVELOPMENT_SNAPSHOT, 79),
+	DEV_15W41B("15w41b", DEVELOPMENT_SNAPSHOT, 78),
+	DEV_15W41A("15w41a", DEVELOPMENT_SNAPSHOT, 77),
+	DEV_15W40B("15w40b", DEVELOPMENT_SNAPSHOT, 76),
+	DEV_15W40A("15w40a", DEVELOPMENT_SNAPSHOT, 75),
+	DEV_15W39C("15w39c", DEVELOPMENT_SNAPSHOT, 74),
+	DEV_15W39B("15w39b", DEVELOPMENT_SNAPSHOT, 74),
+	DEV_15W39A("15w39a", DEVELOPMENT_SNAPSHOT, 74),
+	DEV_15W38B("15w38b", DEVELOPMENT_SNAPSHOT, 73),
+	DEV_15W38A("15w38a", DEVELOPMENT_SNAPSHOT, 72),
+	DEV_15W37A("15w37a", DEVELOPMENT_SNAPSHOT, 71),
+	DEV_15W36D("15w36d", DEVELOPMENT_SNAPSHOT, 70),
+	DEV_15W36C("15w36c", DEVELOPMENT_SNAPSHOT, 69),
+	DEV_15W36B("15w36b", DEVELOPMENT_SNAPSHOT, 68),
+	DEV_15W36A("15w36a", DEVELOPMENT_SNAPSHOT, 67),
+	DEV_15W35E("15w35e", DEVELOPMENT_SNAPSHOT, 66),
+	DEV_15W35D("15w35d", DEVELOPMENT_SNAPSHOT, 65),
+	DEV_15W35C("15w35c", DEVELOPMENT_SNAPSHOT, 64),
+	DEV_15W35B("15w35b", DEVELOPMENT_SNAPSHOT, 63),
+	DEV_15W35A("15w35a", DEVELOPMENT_SNAPSHOT, 62),
+	DEV_15W34D("15w34d", DEVELOPMENT_SNAPSHOT, 61),
+	DEV_15W34C("15w34c", DEVELOPMENT_SNAPSHOT, 60),
+	DEV_15W34B("15w34b", DEVELOPMENT_SNAPSHOT, 59),
+	DEV_15W34A("15w34a", DEVELOPMENT_SNAPSHOT, 58),
+	DEV_15W33C("15w33c", DEVELOPMENT_SNAPSHOT, 57),
+	DEV_15W33B("15w33b", DEVELOPMENT_SNAPSHOT, 56),
+	DEV_15W33A("15w33a", DEVELOPMENT_SNAPSHOT, 55),
+	DEV_15W32C("15w32c", DEVELOPMENT_SNAPSHOT, 54),
+	DEV_15W32B("15w32b", DEVELOPMENT_SNAPSHOT, 53),
+	DEV_15W32A("15w32a", DEVELOPMENT_SNAPSHOT, 52),
+	DEV_15W31C("15w31c", DEVELOPMENT_SNAPSHOT, 51),
+	DEV_15W31B("15w31b", DEVELOPMENT_SNAPSHOT, 50),
+	DEV_15W31A("15w31a", DEVELOPMENT_SNAPSHOT, 49),
+	DEV_15W14A("15w14a", DEVELOPMENT_APRILFOOLS, 48),
+	OFFICIAL_10809("1.8.9", OFFICIAL, 47),
+	OFFICIAL_10808("1.8.8", OFFICIAL, 47),
+	DEV_10808_PRE0("1.8.8-pre", DEVELOPMENT_PRERELEASE, 47),
+	OFFICIAL_10807("1.8.7", OFFICIAL, 47),
+	OFFICIAL_10806("1.8.6", OFFICIAL, 47),
+	OFFICIAL_10805("1.8.5", OFFICIAL, 47),
+	OFFICIAL_10804("1.8.4", OFFICIAL, 47),
+	OFFICIAL_10803("1.8.3", OFFICIAL, 47),
+	OFFICIAL_10802("1.8.2", OFFICIAL, 47),
+	DEV_10802_PRE7("1.8.2-pre7", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE6("1.8.2-pre6", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE5("1.8.2-pre5", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE4("1.8.2-pre4", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE3("1.8.2-pre3", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE2("1.8.2-pre2", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10802_PRE1("1.8.2-pre1", DEVELOPMENT_PRERELEASE, 47),
+	OFFICIAL_10801("1.8.1", OFFICIAL, 47),
+	DEV_10801_PRE5("1.8.1-pre5", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10801_PRE4("1.8.1-pre4", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10801_PRE3("1.8.1-pre3", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10801_PRE2("1.8.1-pre2", DEVELOPMENT_PRERELEASE, 47),
+	DEV_10801_PRE1("1.8.1-pre1", DEVELOPMENT_PRERELEASE, 47),
+	OFFICIAL_10800("1.8", OFFICIAL, 47),
+	DEV_10800_PRE3("1.8-pre3", DEVELOPMENT_PRERELEASE, 46),
+	DEV_10800_PRE2("1.8-pre2", DEVELOPMENT_PRERELEASE, 45),
+	DEV_10800_PRE1("1.8-pre1", DEVELOPMENT_PRERELEASE, 44),
+	DEV_14W34D("14w34d", DEVELOPMENT_SNAPSHOT, 43),
+	DEV_14W34C("14w34c", DEVELOPMENT_SNAPSHOT, 42),
+	DEV_14W34B("14w34b", DEVELOPMENT_SNAPSHOT, 41),
+	DEV_14W34A("14w34a", DEVELOPMENT_SNAPSHOT, 40),
+	DEV_14W33C("14w33c", DEVELOPMENT_SNAPSHOT, 39),
+	DEV_14W33B("14w33b", DEVELOPMENT_SNAPSHOT, 38),
+	DEV_14W33A("14w33a", DEVELOPMENT_SNAPSHOT, 37),
+	DEV_14W32D("14w32d", DEVELOPMENT_SNAPSHOT, 36),
+	DEV_14W32C("14w32c", DEVELOPMENT_SNAPSHOT, 35),
+	DEV_14W32B("14w32b", DEVELOPMENT_SNAPSHOT, 34),
+	DEV_14W32A("14w32a", DEVELOPMENT_SNAPSHOT, 33),
+	DEV_14W31A("14w31a", DEVELOPMENT_SNAPSHOT, 32),
+	DEV_14W30C("14w30c", DEVELOPMENT_SNAPSHOT, 31),
+	DEV_14W30B("14w30b", DEVELOPMENT_SNAPSHOT, 30),
+	DEV_14W30A("14w30a", DEVELOPMENT_SNAPSHOT, 30),
+	DEV_14W29B("14w29b", DEVELOPMENT_SNAPSHOT, 29),
+	DEV_14W29A("14w29a", DEVELOPMENT_SNAPSHOT, 29),
+	DEV_14W28B("14w28b", DEVELOPMENT_SNAPSHOT, 28),
+	DEV_14W28A("14w28a", DEVELOPMENT_SNAPSHOT, 27),
+	DEV_14W27B("14w27b", DEVELOPMENT_SNAPSHOT, 26),
+	DEV_14W27A("14w27a", DEVELOPMENT_SNAPSHOT, 26),
+	DEV_14W26C("14w26c", DEVELOPMENT_SNAPSHOT, 25),
+	DEV_14W26B("14w26b", DEVELOPMENT_SNAPSHOT, 24),
+	DEV_14W26A("14w26a", DEVELOPMENT_SNAPSHOT, 23),
+	DEV_14W25B("14w25b", DEVELOPMENT_SNAPSHOT, 22),
+	DEV_14W25A("14w25a", DEVELOPMENT_SNAPSHOT, 21),
+	DEV_14W21B("14w21b", DEVELOPMENT_SNAPSHOT, 20),
+	DEV_14W21A("14w21a", DEVELOPMENT_SNAPSHOT, 19),
+	DEV_14W20B("14w20b", DEVELOPMENT_SNAPSHOT, 18),
+	DEV_14W20A("14w20a", DEVELOPMENT_SNAPSHOT, 18),
+	DEV_14W19A("14w19a", DEVELOPMENT_SNAPSHOT, 17),
+	DEV_14W18B("14w18b", DEVELOPMENT_SNAPSHOT, 16),
+	DEV_14W18A("14w18a", DEVELOPMENT_SNAPSHOT, 16),
+	DEV_14W17A("14w17a", DEVELOPMENT_SNAPSHOT, 15),
+	DEV_14W11B("14w11b", DEVELOPMENT_SNAPSHOT, 14),
+	DEV_14W11A("14w11a", DEVELOPMENT_SNAPSHOT, 14),
+	DEV_14W10C("14w10c", DEVELOPMENT_SNAPSHOT, 13),
+	DEV_14W10B("14w10b", DEVELOPMENT_SNAPSHOT, 13),
+	DEV_14W10A("14w10a", DEVELOPMENT_SNAPSHOT, 13),
+	DEV_14W08A("14w08a", DEVELOPMENT_SNAPSHOT, 12),
+	DEV_14W07A("14w07a", DEVELOPMENT_SNAPSHOT, 11),
+	DEV_14W06B("14w06b", DEVELOPMENT_SNAPSHOT, 10),
+	DEV_14W06A("14w06a", DEVELOPMENT_SNAPSHOT, 10),
+	DEV_14W05B("14w05b", DEVELOPMENT_SNAPSHOT, 9),
+	DEV_14W05A("14w05a", DEVELOPMENT_SNAPSHOT, 9),
+	DEV_14W04B("14w04b", DEVELOPMENT_SNAPSHOT, 8),
+	DEV_14W04A("14w04a", DEVELOPMENT_SNAPSHOT, 7),
+	DEV_14W03B("14w03b", DEVELOPMENT_SNAPSHOT, 6),
+	DEV_14W03A("14w03a", DEVELOPMENT_SNAPSHOT, 6),
+	DEV_14W02C("14w02c", DEVELOPMENT_SNAPSHOT, 5),
+	DEV_14W02B("14w02b", DEVELOPMENT_SNAPSHOT, 5),
+	DEV_14W02A("14w02a", DEVELOPMENT_SNAPSHOT, 5),
+	OFFICIAL_10710("1.7.10", OFFICIAL, 5),
+	DEV_10710_PRE4("1.7.10-pre4", DEVELOPMENT_PRERELEASE, 5),
+	DEV_10710_PRE3("1.7.10-pre3", DEVELOPMENT_PRERELEASE, 5),
+	DEV_10710_PRE2("1.7.10-pre2", DEVELOPMENT_PRERELEASE, 5),
+	DEV_10710_PRE1("1.7.10-pre1", DEVELOPMENT_PRERELEASE, 5),
+	OFFICIAL_10709("1.7.9", OFFICIAL, 5),
+	OFFICIAL_10708("1.7.8", OFFICIAL, 5),
+	OFFICIAL_10707("1.7.7", OFFICIAL, 5),
+	OFFICIAL_10706("1.7.6", OFFICIAL, 5),
+	DEV_10706_PRE2("1.7.6-pre2", DEVELOPMENT_PRERELEASE, 5),
+	DEV_10706_PRE1("1.7.6-pre1", DEVELOPMENT_PRERELEASE, 5),
+	OFFICIAL_10705("1.7.5", OFFICIAL, 4),
+	OFFICIAL_10704("1.7.4", OFFICIAL, 4),
+	DEV_10704_PRE0("1.7.4-pre", DEVELOPMENT_PRERELEASE, 4),
+	DEV_10703_PRE0("1.7.3-pre", DEVELOPMENT_PRERELEASE, 4),
+	DEV_13W49A("13w49a", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W48B("13w48b", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W48A("13w48a", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W47E("13w47e", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W47D("13w47d", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W47C("13w47c", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W47B("13w47b", DEVELOPMENT_SNAPSHOT, 4),
+	DEV_13W47A("13w47a", DEVELOPMENT_SNAPSHOT, 4),
+	OFFICIAL_10702("1.7.2", OFFICIAL, 4),
+	DEV_10702_PRE0("1.7.2-pre", DEVELOPMENT_PRERELEASE, 4),
+	DEV_10701_PRE0("1.7.1-pre", DEVELOPMENT_PRERELEASE, 4),
+	DEV_10700_PRE0("1.7-pre", DEVELOPMENT_PRERELEASE, 3),
+	DEV_13W43A("13w43a", DEVELOPMENT_SNAPSHOT, 2),
+	DEV_13W42B("13w42b", DEVELOPMENT_SNAPSHOT, 1),
+	DEV_13W42A("13w42a", DEVELOPMENT_SNAPSHOT, 1),
+	DEV_13W41B("13w41b", DEVELOPMENT_SNAPSHOT, 0),
+	DEV_13W41A("13w41a", DEVELOPMENT_SNAPSHOT, 0),
+	@Deprecated DEV_13W39B("13w39b", DEVELOPMENT_SNAPSHOT, -80),
+	@Deprecated DEV_13W39A("13w39a", DEVELOPMENT_SNAPSHOT, -80),
+	@Deprecated DEV_13W38C("13w38c", DEVELOPMENT_SNAPSHOT, -79),
+	@Deprecated DEV_13W38B("13w38b", DEVELOPMENT_SNAPSHOT, -79),
+	@Deprecated DEV_13W38A("13w38a", DEVELOPMENT_SNAPSHOT, -79),
+	@Deprecated DEV_13W37B("13w37b", DEVELOPMENT_SNAPSHOT, -76),
+	@Deprecated DEV_13W37A("13w37a", DEVELOPMENT_SNAPSHOT, -76),
+	@Deprecated DEV_13W36B("13w36b", DEVELOPMENT_SNAPSHOT, -75),
+	@Deprecated DEV_13W36A("13w36a", DEVELOPMENT_SNAPSHOT, -75),
+	UNKNOWN("unknown", TypeVersion.UNKNOWN, Short.MIN_VALUE),
+	;
+	
+	public static final ProtocolVersion[] OFFICIAL_VERSIONS = ProtocolVersion.giveValues(OFFICIAL);
+	public static final ProtocolVersion[] DEVELOPMENT_VERSIONS = Util.hasUtil() ? Util.giveUtil().giveCombinedArray(ProtocolVersion.giveValues(DEVELOPMENT_SNAPSHOT), ProtocolVersion.giveValues(DEVELOPMENT_PRERELEASE)) : new ProtocolVersion[0];
+	
+	private final String name;
+	private final TypeVersion type;
+	private final short version;
+	
+	private ProtocolVersion(final String name, final TypeVersion type, final int version)
+	{
+		this.name = name;
+		this.type = type;
+		this.version = (short) version;
+	}
+	
+	public final String giveName()
+	{
+		return this.name;
+	}
+	
+	public final TypeVersion giveType()
+	{
+		return this.type;
+	}
+	
+	public final short giveVersion()
+	{
+		return this.version;
+	}
+	
+	public final String giveFormattedVersion()
+	{
+		if(Util.hasUtil())
+			return Util.giveUtil().giveFormattedNumber(this.giveVersion());
+		else
+			return String.valueOf(this.giveVersion());
+	}
+	
+	@Override
+	public Map<String, Object> giveProperties(final Map<String, Object> map)
+	{
+		map.put("signature", this.name().trim().toLowerCase().replace('_', ':'));
+		map.put("name", this.giveName());
+		map.put("version", this.giveVersion());
+		return this.giveType().giveProperties(map);
+	}
+	
+	@Override
+	public String toString()
+	{
+		if(Util.hasUtil())
+			return Util.giveUtil().toString(this);
+		else
+			return this.giveName();
+	}
+	
+	public static final ProtocolVersion giveValue(final String name)
+	{
+		Util.nonEmpty(name);
+		for(final ProtocolVersion protocol : ProtocolVersion.values())
+			if(protocol.giveName().equals(name))
+				return protocol;
+		return ProtocolVersion.UNKNOWN;
+	}
+	
+	public static final ProtocolVersion[] giveValues(final int version)
+	{
+		final List<ProtocolVersion> list = new ArrayList<ProtocolVersion>();
+		final int absVersion = Math.abs(version);
+		for(final ProtocolVersion protocol : ProtocolVersion.values())
+			if(protocol.giveVersion() == absVersion)
+				list.add(protocol);
+		return list.toArray(new ProtocolVersion[list.size()]);
+	}
+	
+	public static final ProtocolVersion[] giveValues(final short version)
+	{
+		return ProtocolVersion.giveValues((int) version);
+	}
+	
+	public static final ProtocolVersion[] giveValues(final TypeVersion type)
+	{
+		Util.nonNull(type);
+		final List<ProtocolVersion> list = new ArrayList<ProtocolVersion>();
+		for(final ProtocolVersion protocol : ProtocolVersion.values())
+			if(protocol.giveType() == type && protocol.giveVersion() >= 0)
+				list.add(protocol);
+		return list.toArray(new ProtocolVersion[list.size()]);
+	}
+	
+	public static enum TypeVersion implements Rhenowar
+	{
+		
+		DEVELOPMENT_SNAPSHOT	(	false	, true	),
+		DEVELOPMENT_PRERELEASE	(	false	, true	),
+		DEVELOPMENT_APRILFOOLS	(	false	, true	),
+		OFFICIAL				(	true	, true	),
+		UNKNOWN					(	false	, false	),
+		;
+		
+		private final boolean official, known;
+		
+		private TypeVersion(final boolean official, final boolean known)
+		{
+			this.official = official;
+			this.known = known;
+		}
+		
+		public final boolean isKnown()
+		{
+			return this.known;
+		}
+		
+		public final boolean isOfficial()
+		{
+			return this.official && this.isKnown();
+		}
+		
+		public final boolean isDevelopment()
+		{
+			return !this.isOfficial() && this.isKnown();
+		}
+		
+		@Override
+		public Map<String, Object> giveProperties(final Map<String, Object> map)
+		{
+			map.put("type", this.name());
+			map.put("official", this.isOfficial());
+			map.put("known", this.isKnown());
+			map.put("development", this.isDevelopment());
+			return map;
+		}
+		
+		@Override
+		public String toString()
+		{
+			if(Util.hasUtil())
+				return Util.giveUtil().toString(this);
+			else
+				return this.name().toLowerCase().replace('_', '.');
+		}
+		
+	}
+	
+}

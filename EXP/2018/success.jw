@@ -1,0 +1,19 @@
+
+<div class="text-center">
+  <button class="btn btn-success" data-toggle="collapse" href="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+    pokaż etapy analizowania zdjęcia
+  </button><br>
+<div class="collapse" id="collapseExample">
+ <br>
+%photos%
+</div>
+</div>
+<hr>
+<div class="text-center">%cards%</div>
+<script type="text/javascript">
+  function btn_clean(){
+    document.getElementById('clean').innerHTML = "";
+    document.getElementById('resize').classList.add('col-12');
+    document.getElementById('resize').classList.remove('col-9');
+  }
+</script>

@@ -1,0 +1,9 @@
+
+name: RhenowarUtil
+main: net.polishgames.rhenowar.util.UtilPlugin
+version: 1.6.2.1
+author: Bartosz Konkol
+
+website: http://www.rhenowar.net/
+softdepend: [WorldEdit, ProtocolLib]
+load: POSTWORLD

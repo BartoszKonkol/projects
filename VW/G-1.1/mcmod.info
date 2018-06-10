@@ -1,0 +1,11 @@
+[
+{
+"modid": "VW",
+"name": "Virtual World",
+"description": "\u00A7oVirtual World G-1.1\u00A7r\n\nAbout:\n\n\u00A7lVirtual World G-1.1\u00A7r - to modyfikacja do gry Minecraft dodaj¹ca nowe biomy, bloki, itemy, komendy, moby, osi¹gniêcia, struktury, œwiaty, zbrojê, i wiele, wiele wiêcej. Godnymi uwagi s¹ takie bloki jak: Radio (po uruchomieniu gra muzyka), Miêkkie Bloki (czyli Topniej¹cy œnieg i Ulepszony oraz zwyk³y Têczowy Blok; s¹ bloki, w którym mo¿na siê zapadaæ), Ulepszony têczowy blok (daje mo¿liwoœæ wysokiego skakania), Blok Akwamarynu (umo¿liwia szybkie poruszanie siê w dowolnym kierunku) i Zabójczy blok (po dotkniêciu go przez moba/gracza, byt traci 20 punktów ¿ycia). Ciekawym mobem jest równie¿ Herobrine. Posiada on wiele efektów specjalnych. Z itemów najciekawszymi s¹ Sztylety (w 9 rodzajach) oraz Kamieñ Przemiany. W sumie (w wersji Beta 1.2) modyfikacja dodaje 3 biomy, 20 bloków (w tym 1 blok techniczny), 35 itemów (w tym 1 item techniczny i 4 czêœci zbroi), 2 komendy, 2 moby, 2 osi¹gniêcia, 1 strukturê, 1 œwiat i 1 zbrojê. Modyfikacja Virtual World zmienia równie¿ wiele aspektów technicznych i graficznych gry Minecraft.\u00A7r",
+"url": "\u00A79\u00A7o\u00A7nhttp://www.virtualworld.keed.pl/\u00A7r",
+"logoFile": "/vw/files/graphics/vw_logo.png",
+"version": "G-1.1",
+"authorList": ["\u00A74\u00A7lBartosz Konkol\u00A7r", "Marcin Auer"]
+}
+]

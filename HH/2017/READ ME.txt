@@ -1,0 +1,29 @@
+==================================================
+ Liga HackHeroes - Hackathon - Ochrona Środowiska
+                  Zgłoś bałagan
+==================================================
+         http://vps.polishgames.net:8081/
+==================================================
+ Nazwa zespołu:
+	JERZE
+ Skład zespołu:
+	Filusz Patryk, Konkol Bartosz
+ Nazwa szkoły:
+	Zespół Szkół Technicznych w Rybniku
+ Imię i nazwisko opiekuna:
+	Cyroń Sebastian
+ Nazwa projektu:
+	Zgłoś bałagan
+ Użyte języki programowania, technologie:
+	Java, HTML, CSS, JavaScript, Lua, SQL
+==================================================
+W niniejszym archiwum ZIP zamieszczone zostały zasoby stanowiące aplikacje konkursową.
+W poszczególnych katalogach znajdują się następujące elementy:
+	- 'apk' - skompilowana wersja aplikacji
+	- 'cnf' - przykładowy plik konfiguracyjny
+	- 'lib' - biblioteki zewnętrzne wykorzystywane przez aplikacje
+	- 'res' - zasoby aplikacji
+	- 'src' - kod źródłowy aplikacji
+W celu uruchomienia aplikacji na prywatnej maszynie, wymagane jest skopiowanie plików z katalogów 'apk', 'cnf' oraz 'lib', i umieszczenie ich w jednym miejscu - a następnie wykonanie konfiguracji w pliku config.lua i wywołanie programu np. poprzez następujący kod (dla systemu Linux):
+	java -cp mysql-connector-java-5.1.42-bin.jar:luaj-jse-3.0.1.jar:gson-2.8.0.jar:apki.jar net.polishgames.apki.hackathon.edition2.Main
+==================================================

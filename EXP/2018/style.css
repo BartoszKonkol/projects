@@ -1,0 +1,116 @@
+body {
+	background-image: url('../img/gra4.jpg');
+}
+
+strong{
+  letter-spacing: 1px;
+}
+#bg-sha {
+ background-color: #00000088;
+ height: 100%
+}
+
+#header {
+ background-color: #000000;
+ color: #ffffff;
+ border-radius: 10px;
+ box-shadow: 0px 0px 20px #000000;
+ padding: 12px;
+ background: url('../img/bg-ban3.jpg') no-repeat;
+ background-size: cover;
+ margin-bottom: 10px;
+ text-align: center;
+ vertical-align: center;
+ word-wrap: break-word;
+}
+
+#header-title {
+ font-size: 60px;
+ text-transform: uppercase; 
+ text-shadow: 3px 3px 10px #333333;
+}
+
+#title-link:hover {
+ text-decoration: none !important;
+}
+
+#menu {
+ box-shadow: 0px 0px 20px #000000;
+ border-radius: 10px;
+ padding: 12px;
+ height: 100%;
+ text-align: center;
+}
+
+#content {
+ border-radius: 10px;
+ box-shadow: 0px 0px 20px #000000;
+ padding: 12px;
+ height: 100%;
+}
+
+#footer {
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: 0px 0px 20px #000000;
+ padding: 12px;
+ margin-top: 10px;
+}
+
+.transform_photo {
+width: 100px;
+height: 100px;
+transition: all .2s ease-in-out;
+position:relative;
+}
+
+.transform_photo:hover{
+ transform:scale(3); 
+ -webkit-transform:scale(3); 
+ -moz-transform:scale(3); 
+ -o-transform:scale(3); 
+ z-index: 2;
+}
+
+.big_photo{
+
+}
+
+
+.karta, .karta-zatw{
+ width: 270px; 
+ margin: 10px; 
+ display: inline-block;
+ margin: auto;
+ margin-bottom: 10px;
+}
+
+.card-body {
+ padding: 5px !important;
+}
+
+/*
+.karta-zatw{
+ width: 270px; 
+ margin: 10px; 
+ display: inline-block;
+ margin: auto;
+}
+*/
+
+.card_image{
+ max-height: 300px;
+ width: auto;
+ max-width: 100%;
+}
+
+#mute{
+ position: absolute; 
+ height: 100%; 
+ width: 100%; 
+ background-color: grey;
+ z-index: 10; 
+ top: 0px; 
+ left: 0px; 
+ opacity: 0;
+}

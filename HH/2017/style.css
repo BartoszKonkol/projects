@@ -1,0 +1,261 @@
+html, body
+{
+	background-color: white;
+	background-image: url(background.gif);
+	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Verdana;
+}
+
+#top
+{
+	position: fixed;
+	width: 70%;
+	height: 100%;
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: left;
+	box-shadow: 2px 0px 100px 25px;
+}
+
+#header
+{
+	background: url(header.jpg);
+	background-repeat: repeat-x;
+	overflow: hidden;
+	background-color: #30de38;
+	font-family: fantasy;
+	letter-spacing: 1px;
+	word-spacing: 6px;
+	height:10%;
+}
+
+#mainmenu
+{
+	width: 20%;
+	float: left;
+	overflow: visible;
+	background-color: #30de38;
+	min-height:100%;
+}
+
+#title
+{
+	margin-top: 5px;
+}
+
+#content
+{
+	width:75%;
+	height:90%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	float: left;
+	text-align: center;
+	background-color: white;
+	position: relative;
+	z-index: 0;
+	overflow-y: auto;
+	box-shadow:0 0 50px 10px #afa inset;
+}
+
+#menu
+{
+	list-style-type:none;
+	width: 100%;
+	padding:5px;
+	margin:0;
+	font-size:18px;
+	text-align:center;
+	height:50px;
+	line-height:50px;
+	position:relative;
+	z-index: 1;
+}
+
+#menu a
+{
+	display:block;
+	text-decoration:none;
+	padding:0px;
+	color: #333;
+}
+
+#menu > li
+{
+	background-color: white;
+	width: 90%;
+	margin-top:10px;
+	position: relative;
+	margin-left: 5px;
+	border-radius: 10px;
+}
+
+#menu > li:first-child
+{
+	margin-top:0px;
+}
+
+#menu > li:hover
+{
+	background-color:#eee;
+	padding-right: 5px;
+	box-shadow: 10px 10px 15px;
+}
+
+#menu > li.list:hover
+{
+	border-radius: 10px 0px 0px 10px;
+	padding-right: 10px;
+}
+
+#menu > li > ul
+{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	width: 100%;
+	position:absolute;
+	top:0px;
+}
+
+#menu > li:hover > ul
+{
+	display:block;
+}
+
+#menu > li:hover > ul > li
+{
+	display:block;
+}
+
+#menu > li > ul > li
+{
+	background-color:#eee;
+	left:100%;
+	width:100%;
+	display:none;
+	bottom: 0;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 10px 10px 15px;
+}
+
+#menu > li > ul > li:first-child
+{
+	border-top-right-radius: 10px;
+}
+
+#menu > li > ul > li:last-child
+{
+	border-radius: 0px 0px 10px 10px;
+}
+
+#menu > li > ul > li:hover
+{
+	background-color: #ddd;
+}
+a.gallery
+{
+	text-decoration: none;
+}
+
+a.gallery:hover
+{
+	opacity : 0.70;
+	filter : alpha(opacity=70);
+}
+
+div.gallery
+{
+	width: 300px;
+	height: 270px;
+	margin: 5px;
+	border: solid 3px;
+	border-color: #3a5;
+	display: inline-block;
+	white-space: normal;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+div.gallery:hover
+{
+	border-color: #5c7;
+}
+
+div.img
+{
+	width: 300px;
+	height: 200px;
+	background-color: #ddd;
+	overflow: hidden;
+	text-align: center;
+}
+
+a.gallery:hover > div.img
+{
+	background-color: #aaa;
+}
+
+div.img > img
+{
+	height: 100%;
+}
+
+div.desc
+{
+	color: black;
+	width: 100%;
+	height:70px;
+	background-color: #afa;
+	box-shadow:0 0 10px 2px #3f3 inset;
+	font-size: 14px;
+}
+
+a.gallery:hover > div.desc
+{
+	background-color: #dfd;
+}
+
+#photo
+{
+	width: 100% ;
+	text-align: center;
+}
+
+#photo > img
+{
+	max-width: 90%;
+}
+
+#map
+{
+	width: 400px;
+	height: 300px;
+	background-color: lime;
+}
+
+#hello
+{
+	font-size: 24px;
+	text-align: center;
+}
+
+form
+{
+	margin-top: 15px
+}
+
+#alert
+{
+	color: red;
+	text-transform: uppercase;
+}
+
+p
+{
+	text-align: justify;
+}

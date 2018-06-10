@@ -1,0 +1,42 @@
+<div class="karta-zatw text-center">
+	<div class="card">
+		<div class="card-header">
+			<div class="row">
+				<div class="col-9" style="padding: 0px;">
+					<a href="%link%?page=details.%id%" target="_blank">
+      <h3>%name%</h3>
+     </a>
+				</div>
+				<div class="col-3" style="padding: 0px;">
+					<h4>
+      <span class="text-%color%">
+       <b>%percent%%</b>
+      </span>
+     </h4>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+   <a href="%link%?page=details.%id%" target="_blank">
+			 <p class="card-text">
+				 <img class="card_image" src="%link%photo/%id%">
+		 	</p>
+   </a>
+		</div>
+		<div class="card-footer">
+			<div class="row">
+				<div id="resize" class="col-9" style="padding: 0px;">
+		  	<a href="%google%" target="_blank">Więcej grafiki</a>
+	  		<br>
+		  	<a href="%wikipedia%" target="_blank">Więcej informacji</a>
+				</div>
+				<div id="clean" class="col-3" style="padding: 0px;">
+					<a href="#" target="_blank">
+						<button onclick="btn_clean()" id="zatwierdz" class="btn-lg btn btn-success " style="font-size: 0.75em; padding: 5px; width: 100%;">TO JEST<br>TO!</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

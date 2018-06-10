@@ -1,0 +1,11 @@
+<p>Celem projektu jest stworzenie interaktywnego atlasu roślin, którego działanie polega na analizowaniu dostarczanych przez użytkowników zdjęć. Aplikacja wykorzystuje elementy uczenia maszynowego do sklasyfikowania rośliny, następnie na podstawie zebranych danych modyfikuje bazę, by usprawnić identyfikowanie tej rośliny przy następnym wyszukiwaniu.</p>
+<p>Głównym aspektem prac będzie stworzenie algorytmów służących do analizy i identyfikowania zdjęć obiektów, które umożliwią w przyszłości dalszy rozwój aplikacji na szerszym polu użyteczności.Algorytm ten może zostać wykorzystany do takich zadań jak:
+ <ul>
+  <li>wykrywanie uszkodzonych przedmiotów na taśmach produkcyjnych</li>
+  <li>kontrola obciążenia pojazdu poprzez rozpoznanie prześwitu i odległości koła od nadkola</li>
+  <li>sortowaniem</li>
+  <li>wyszukiwarki w sklepach internetowych (gdy mamy zdjęcie lecz nie  znamy nazwy produktu)</li>
+ </ul>
+</p>
+<p>Aplikacja działać będzie na autorskim silniku stron internetowych, umożliwiającym spełnienie kryteriów projektu oraz charakteryzującym się rozbudowanymi funkcjonalnościami i wysoką wydajnością.</p>
+<p>W ramach przygotowania przeprowadzona została ankieta, której wyniki wykazały zainteresowanie badanych przedstawionym projektem oraz ich niską wiedzę przyrodniczą.</p>
